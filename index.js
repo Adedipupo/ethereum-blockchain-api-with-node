@@ -1,22 +1,24 @@
-require('dotenv').config();
-const express= require('express')
-const app =express()
+require('dotenv').config()
+const express = require('express')
+const app = express()
 const routes = require('./routes/routes')
-const Web3 = require('web3');
-const mongoose = require('mongoose')
-const contract = require('truffle-contract');
+const Web3 = require('web3')
+const mongodb = require('mongodb').MongoClient
+const contract = require('truffle-contract')
 app.use(express.json())
 
-const PORT = process.env.PORT || 1234
+app.get('/', (req, res) => {
+  res.send('api is live...')
+})
 
-app.get('/',(req, res)=>{
-    res.send("api is live...")
-  });
-
-mongoose
-  .connect(process.env.MONGODB_URI)
-  .then(() => {app.listen(PORT, () => {
-    console.log(`Connected to mongodb successfully,Server running on port ${PORT}`)
-  })})
+mongodb
+  .connect(process.env.DB, { useUnifiedTopology: true })
+  .then((err, client) => {
+    // const db = client.db('Cluster0');
+    //home
+    // routes(app, db)
+    app.listen(process.env.PORT || 8083, () => {
+      console.log('listening on port 8083')
+    })
+  })
   .catch((err) => console.log(err))
-
