@@ -5,6 +5,11 @@
   "repository": "https://github.com/Adedipupo/ethereum-blockchain-api-with-node.git",
   "author": "Adedipupo <ajokanola@terragonltd.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "dev" : "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
