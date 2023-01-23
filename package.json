@@ -1,0 +1,18 @@
+{
+  "name": "ethereum-blockchain-api-with-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Adedipupo/ethereum-blockchain-api-with-node.git",
+  "author": "Adedipupo <ajokanola@terragonltd.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.4",
+    "nodemon": "^2.0.20",
+    "shortid": "^2.2.16",
+    "truffle": "^5.7.3",
+    "truffle-contract": "^4.0.31",
+    "web3": "^1.8.1"
+  }
+}
