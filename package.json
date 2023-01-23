@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node index.js",
-    "dev" : "nodemon index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -16,6 +16,7 @@
     "mongoose": "^6.8.4",
     "nodemon": "^2.0.20",
     "shortid": "^2.2.16",
+    "socket.io": "^4.5.4",
     "truffle": "^5.7.3",
     "truffle-contract": "^4.0.31",
     "web3": "^1.8.1"
